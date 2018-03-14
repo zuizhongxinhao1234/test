@@ -1,0 +1,35 @@
+<div class="layout__top">
+	<div class="layout__title">舆情大数据平台</div>
+	<div class="layout__tip--left">
+		<div class="layout__tip--background"></div>
+		<div class="layout__sum--title">属地网站舆情总抓取数量</div>
+		<div class="layout__sum--items" flip-cards="sumNumber"></div>
+	</div>
+	<div class="layout__tip--right">
+		<div class="layout__tip--background"></div>
+		<div class="layout__sum--detail">
+			<div class="label">总发帖数</div>
+			<div class="text">{{postSum | number}}<span>条</span></div>
+		</div>
+		<div class="layout__sum--detail">
+			<div class="label">总回帖数</div>
+			<div class="text">{{replaySum | number}}<span>条</span></div>
+		</div>
+	</div>
+	<div class="c__clearFix"></div>
+</div>
+<div class="layout__content" ui-view="content">
+</div>
+
+<div class="layout__map"></div>
+
+<div class="layout__menus">
+	<div class="layout__menu" ng-class="{'active': nowActive=='place'}" ui-sref="l.place">舆论场</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='figure'}" ui-sref="l.figure">热点人物</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='words'}" ui-sref="l.words">涉容热词</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='speech'}" ui-sref="l.speech">言论趋势</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='centralized'}" ui-sref="l.centralized">归口占比</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='event'}" ui-sref="l.event">事件传播</div>
+	<div class="layout__menu" ng-class="{'active': nowActive=='grab'}" ui-sref="l.grab">数据抓取</div>
+	<div class="c__clearFix"></div>
+</div>

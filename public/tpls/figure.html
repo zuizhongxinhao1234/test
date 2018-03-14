@@ -1,0 +1,41 @@
+<div class="layout__content--bigItem">
+	<div class="layout__background"></div>
+	<div class="layout__background--bigItem"></div>
+	<div class="figure__content">
+		<div class="figure__Bg1">
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+			<div class="figure__Item"></div>
+		</div>
+		<div class="figure__Bg1">
+			<div class="figure__Item figure__Item--active" ng-repeat="PeopleNew in HotPeopleNewList">
+				<span class="figure__Item--time"><span class="figure__number">{{PeopleNew.time}}</span></span>
+				<span class="figure__Item--content">{{PeopleNew.title}}</span>
+				<span class="figure__Item--browse">浏：<span class="figure__number">{{PeopleNew.views}}</span></span>
+				<span class="figure__Item--reply">回：<span class="figure__number">{{PeopleNew.replyAmount}}</span></span>
+				<span class="figure__Item--type figure__Item--type--stability">{{PeopleNew.type}}</span>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="layout__content--smallItem">
+	<div class="layout__background"></div>
+	<div class="layout__background--smallItem"></div>
+	<div class="figure__field">
+		<div class="figure_field--selectedBox" figure-move="index"></div>
+		<div ng-class="{'current':index==$index}" class="figure__field--item" ng-repeat="people in HotPeopleListNow">
+			<div class="figure__field--image"><img ng-if="people.img_url!=''" ng-src="people.img_url"></div>
+			<p>{{people.source}}</p><span>{{people.name}}</span>
+		</div>
+	</div>
+</div>

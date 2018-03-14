@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'f_z_chao_xi';
+	src: font_url('fzltcxhjt.TTF');
+}
+
+@font-face {
+	font-family: 'myriad';
+	src: font_url('MyriadWebPro.ttf');
+}
+
+//=============layout config==============
+$baseFontFamily: 'Microsoft YaHei';		//默认字体
+$baseTitleFamily: 'f_z_chao_xi';	//标题字体
+$baseEnFamily: 'myriad';	//英文和数字字体

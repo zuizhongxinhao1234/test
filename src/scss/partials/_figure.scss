@@ -1,0 +1,193 @@
+.figure__content {
+    width: 100%;
+    height: 480px;
+    position: relative;
+    z-index: 2;
+    margin: 10px auto;
+}
+
+.figure__Bg1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 480px;
+}
+
+.figure__Item {
+    width: 94%;
+    height: 42px;
+    margin: auto;
+    padding: 0 1%;
+    color: #ffffff;
+    border-bottom: 1px solid #32485b;
+    font-family: $baseFontFamily;
+    span {
+        position: relative;
+        top: 22px;
+        font-size: 16px;
+        display: inline-block;
+        //@include opacity(0);
+        .figure__number {
+            position: relative;
+            top: 0px;
+            font-family: $baseEnFamily;
+        }
+    }
+}
+
+.figure__Item--active span {
+    -webkit-animation: _figure__text 0.2s;
+}
+
+.figure__Item--time {
+    width: 14%;
+}
+
+.figure__Item--content {
+    width: 56%;
+}
+
+.figure__Item--browse {
+    color: #8fb080;
+    width: 10%;
+}
+
+.figure__Item--reply {
+    color: #e9837f;
+    width: 14%;
+}
+
+.figure__Item--type--stability {
+    color: #f3b8a9;
+}
+
+.figure__Item--type--cityImage {
+    color: #f5656d;
+}
+
+.figure__Item--type--ideology {
+    color: #9de0fb;
+}
+
+.figure__Item--type--petrochemical {
+    color: #f5e7a3;
+}
+
+@-webkit-keyframes _figure__text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.figure__field {
+    position: relative;
+    z-index: 2;
+    width: 96%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    font-family: $baseFontFamily;
+}
+
+.figure__field--item {
+    width: 150px;
+    height: 200px;
+    color: #ffffff;
+    margin: 30px 34px;
+    text-align: center;
+    display: inline-block;
+}
+
+.figure__field--image {
+    width: 145px;
+    height: 145px;
+    background: #ffffff;
+    border-radius: 50%;
+    //background-image: image_url('hot_big1.png');
+    background-size: 100% 100%;
+}
+
+.figure__field .current p,
+.figure__field .current span {
+    color: #0df1eb;
+}
+
+.figure__field--item:nth-child(1) .figure__field--image {
+    background-color: #a3b9da;
+}
+
+.figure__field--item:nth-child(2) .figure__field--image {
+    background-color: #d4daa3;
+}
+
+.figure__field--item:nth-child(3) .figure__field--image {
+    background-color: #daa3a3;
+}
+
+.figure__field--item:nth-child(4) .figure__field--image {
+    background-color: #a6a3da;
+}
+
+.figure__field--item:nth-child(5) .figure__field--image {
+    background-color: #a6daa3;
+}
+
+.figure__field--item:nth-child(6) .figure__field--image {
+    background-color: #a3dad7;
+}
+
+.figure__field--item:nth-child(7) .figure__field--image {
+    background-color: #f4ddbe;
+}
+
+.figure__field--item:nth-child(8) .figure__field--image {
+    background-color: #d7a396;
+}
+
+.figure__field--item p {
+    font-size: 24px;
+    color: #1f89fd;
+    margin: 6px auto;
+    transition: all 0.3s linear;
+}
+
+.figure__field--item span {
+    transition: all 0.3s linear;
+}
+
+.figure_field--selectedBox {
+    width: 180px;
+    height: 230px;
+    border: 1px solid #0df1eb;
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    -webkit-box-shadow: #AAF7F7 0px 0px 11px;
+    -moz-box-shadow: #AAF7F7 0px 0px 11px;
+    box-shadow: #AAF7F7 0px 0px 11px;
+    left: 17px;
+    // transition: all 0.3s linear 0s;
+    // -webkit-animation: _figure__BoxMove .5s forwards;
+    //	-moz-animation: _figure__BoxMove .5s forwards;
+    //  	animation: _figure__BoxMove .5s forwards;
+}
+
+.figure__field--item--selected,
+.figure__field--item--selected p {
+    color: #0df1eb;
+    text-shadow: 0 0 5px #AAF7F7;
+}
+
+//框移动动画
+@-webkit-keyframes _figure__BoxMove {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 17px;
+    }
+}
